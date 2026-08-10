@@ -3,8 +3,9 @@ node_modules/
 .env
 .DS_Store
 
-# Fetched HTML corpus is large and reproducible; keep only curated fixtures under test/.
-fixtures/**/*.htm
-fixtures/**/*.html
-fixtures/**/*.json
-!fixtures/.gitkeep
+# Fetched HTML corpus IS committed (not ignored): EDS only ever serves today
+# + 3 days ahead, so a given day's snapshot is gone for good once it passes —
+# it isn't reproducible later. The daily fetch cloud routine depends on this:
+# each run clones fresh with no local disk to carry state between days, so
+# fixtures/ in git is the only place the corpus accumulates. Curated,
+# hand-picked fixtures for fast test runs still live under test/fixtures/.
