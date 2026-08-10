@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.env
+.DS_Store
+
+# Fetched HTML corpus is large and reproducible; keep only curated fixtures under test/.
+fixtures/**/*.htm
+fixtures/**/*.html
+fixtures/**/*.json
+!fixtures/.gitkeep

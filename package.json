@@ -1,0 +1,23 @@
+{
+  "name": "struja-alert",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Push notifications for planned electricity outages in Serbia, matched to the user's street. Phase 1: data spike.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch-corpus.mjs",
+    "report": "node scripts/resolution-report.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "iconv-lite": "^0.6.3"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.0"
+  }
+}
